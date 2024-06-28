@@ -1,0 +1,537 @@
+/* Cuerpo de la página */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.sectionheader {
+    height: 20%;
+}
+
+/* Estilos del header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #618EB4;
+    padding: 1em;
+    color: black;
+    height: 100%;
+    position: relative;
+    z-index: 10; 
+}
+
+.header__logo {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-img {
+    width: 12em;
+    height: auto;
+    display: block;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    position: relative; 
+    z-index: 20; 
+}
+
+.header__nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 4em;
+}
+
+.header__nav-item {
+    display: inline;
+}
+
+.header__nav-link {
+    position: relative;
+    padding: 1em;
+    background: #FA4616;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s, border-bottom-width 0.3s;
+    border-bottom: 0.2em solid transparent;
+}
+
+.header__nav-link:hover {
+    color: black;
+    border-bottom: 0.2em solid black;
+}
+
+.header__menu-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    position: relative;
+    z-index: 30; 
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #618EB4;
+    border: solid 0.2em black;
+    overflow-y: auto;
+    transition: right 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 60px;
+    z-index: 40; 
+}
+
+.sidebar__list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+.sidebar__item {
+    padding: 10px;
+    text-align: left;
+}
+
+.sidebar__link {
+    font-family: "Be Vietnam Pro", sans-serif;
+    padding: 1em;
+    background: #FA4616;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    transition: color 0.3s, border-bottom-width 0.3s;
+    border-bottom: 0.2em solid transparent;
+}
+
+.sidebar__link:hover {
+    color: black;
+    border-bottom: 0.2em solid black;
+}
+
+.sidebar__logo {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar__logo-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sidebar__close-btn {
+    position: absolute;
+    top: 0em;
+    right: 1em;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 50; 
+}
+
+#menu-toggle:checked ~ .sidebar {
+    right: 0;
+}
+
+.overlay {
+    display: none;
+}
+
+.sectionbooks {
+    display: grid;
+    grid-template-columns: 16em 1fr;
+    gap: 3em;
+    padding: 1em;
+    color: black;
+    margin-top: 0;
+    height: 100%;
+    z-index: 5; 
+}
+
+/* Estilos del aside sectionbooks */
+.rightside {
+    width: 16em;
+    height: 38em;
+    background-color: #E7E5D9;
+    border: solid 0.1em black;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2em;
+    z-index: 1; 
+}
+
+.rightside_list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+.rightside_item {
+    padding: 1em;
+    text-align: left;
+}
+
+.rightside_link {
+    font-family: "Be Vietnam Pro", sans-serif;
+    padding: 1em;
+    background: #FA4616;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    transition: color 0.3s, border-bottom-width 0.3s;
+    border-bottom: 0.2em solid transparent;
+    margin-bottom: 3em;
+}
+
+.rightside_link:hover {
+    color: black;
+    border-bottom: 0.2em solid black;
+}
+
+/* Contenedor de infobooks */
+.infobook-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 2em;
+}
+
+.infobook {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    background-color: #ecead3;
+    padding: 1em;
+}
+
+.infobook_image {
+    flex: 1;
+    width: 100%;
+    height: auto;
+}
+
+.infobook_details {
+    flex: 2;
+    margin-left: 1em;
+}
+
+.imgbook {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.titlebook {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    color: black;
+}
+
+.score {
+    margin-top: 0.5em;
+}
+
+.score span {
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.score span:hover,
+.score span.active {
+    color: gold;
+}
+
+.btnhear {
+    background-color: #FA4616;
+    color: black;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.btnhear:hover {
+    color: black;
+    border-bottom: 0.2em solid black;
+}
+
+.btnsave {
+    font-size: 1.5em;
+    color: #000;
+    margin-top: 1em;
+    text-decoration: none;
+}
+
+.btnsave:hover {
+    color: black;
+}
+
+/* Footer */
+.footerbooks {
+    display: flex;
+    background-color: #618EB4;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    color: black;
+    z-index: 5; 
+}
+
+.footerinfo {
+    display: flex;
+    gap: 8em;
+    align-items: center;
+}
+
+.networks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.network_link {
+    font-family: "Be Vietnam Pro", sans-serif;
+    padding: 0.05em 0.1em;
+    width: 18em;
+    background: #F7F5EB;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.1em;
+    transition: transform 0.3s ease;
+    transform: scale(0.9);
+}
+
+.network_link:hover {
+    color: #000;
+    transform: scale(1);
+}
+
+.location {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+.img_map {
+    height: 8em;
+    width: 13em;
+}
+
+/* Media Queries */
+
+/* Media Query para tablet */
+@media (max-width: 1025px) {
+    .header {
+        flex-direction: row;
+        padding: 0.5em;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__logo-img {
+        width: 10em;
+        height: auto;
+        display: block;
+    }
+
+    .header__nav-link {
+        width: 8em;
+        font-size: 1.2em;
+        z-index: 8;
+    }
+
+    .footerbooks .header__logo-img {
+        width: 7em;
+        height: auto;
+        display: block;
+    }
+
+    .network_link {
+        width: 15em;
+    }
+
+    .header__nav {
+        margin-left: 1em;
+        z-index: 30;
+    }
+
+    .header__nav-list {
+        gap: 1em;
+        font-size: 0.8em;
+        z-index: 20;
+    }
+
+    .sectionbooks {
+        grid-template-columns: 1fr;
+    }
+
+    .rightside {
+        width: 100%;
+        height: 33em;
+        order: -1;
+        padding-top: 1em;
+        z-index: 5;
+    }
+
+    .rightside_list,
+    .rightside_item {
+        text-align: center;
+        gap: 0.01em;
+        z-index: 1;
+    }
+
+    .infobook {
+        flex-direction: row;
+    }
+
+    .infobook_image {
+        width: 50%;
+        height: auto;
+        align-items: center;
+    }
+
+    .infobook_details {
+        width: 50%;
+        margin-left: 0;
+    }
+
+    .footerbooks {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        display: block;
+        height: auto;
+        gap: 3em;
+    }
+
+    .footerinfo {
+        flex-direction: row;
+        gap: 5em;
+        align-items: center;
+    }
+
+    .location {
+        flex-direction: row;
+        gap: 1em;
+    }
+}
+
+@media (max-width: 1000px) {
+    .footerinfo {
+        flex-direction: row;
+        gap: 1em;
+        align-items: center;
+    }
+}
+
+/* Media Query dispositivos móviles */
+@media (max-width: 767px) {
+    .header {
+        flex-direction: row;
+        padding: 0.5em;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .header__logo-img {
+        width: 6em;
+        height: 2em;
+    }
+
+    .header__nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        z-index: 30;
+        position: relative;
+    }
+
+    .header__nav-list {
+        display: flex;
+        gap: 0.5em;
+        font-size: 0.5em;
+        z-index: 20;
+    }
+
+    .header__menu-icon {
+        font-size: 1.2em;
+    }
+
+    .sectionbooks {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rightside {
+        width: 100%;
+        height: auto;
+        order: -1;
+        padding-top: 1em;
+        z-index: 5;
+        position: relative;
+    }
+
+    .rightside_list,
+    .rightside_item {
+        text-align: center;
+        z-index: 1;
+    }
+
+    .infobook {
+        flex-direction: row;
+        gap: 1em;
+        background-color: #ecead3;
+        padding: 1em;
+    }
+
+    .infobook_image {
+        width: 100px;
+        height: auto;
+    }
+
+    .infobook_details {
+        flex: 2;
+        margin-left: 1em;
+    }
+
+    .footerbooks {
+        flex-direction: column;
+    }
+
+    .footerinfo {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .location {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
