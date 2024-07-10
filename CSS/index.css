@@ -1,0 +1,330 @@
+/* Estilos generales */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #CFD5C8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos del encabezado (header) */
+.header {
+    background: #ecead3;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 20px;
+}
+
+.header__logo-img {
+    max-width: 180px; /* Ajusta el tamaño del logo */
+}
+
+.header__nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+.header__menu-link {
+    color: #fff;
+    padding: 10px 13px;
+    transition: background 0.3s;
+    background: #27619b;
+    border-radius: 5px;
+}
+
+.header__menu-link:hover {
+    background: #34495e;
+}
+
+/* Estilos del menú de hamburguesa */
+.header__hamburger-menu {
+    position: relative;
+}
+
+.hamburger-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #27619b;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.hamburger-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ecead3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 180px; /* Ancho ajustado para el contenido del menú */
+}
+
+.hamburger-content a {
+    display: block;
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px; /* Añadido margen inferior */
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.hamburger-content a:hover {
+    background: #34495e;
+    color: #fff; 
+}
+
+/* Estilos del eslogan */
+.slogan {
+    background: url('/IMG_files/montaña.jpeg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.slogan__title {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.slogan__description {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.slogan__btn {
+    background: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.slogan__btn:hover {
+    background: #c0392b;
+}
+
+/* Estilos de las secciones */
+.section {
+    padding: 60px 20px;
+}
+
+.section__title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section__description {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card__description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.card__list {
+    padding-left: 20px;
+}
+
+.card__list-item {
+    margin-bottom: 10px;
+}
+
+.card__list-link {
+    color: #e74c3c;
+    transition: color 0.3s;
+}
+
+.card__list-link:hover {
+    color: #c0392b;
+}
+
+/* Estilos del pie de página (footer) */
+.footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer__logo-img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.footer__social {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.footer__social-link {
+    background: #e74c3c;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.footer__social-link:hover {
+    background: #c0392b;
+}
+
+.footer__contact-text {
+    margin-bottom: 20px;
+}
+
+.footer__contact-map {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .header__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header__logo {
+        margin-bottom: 10px;
+    }
+
+    .header__nav ul {
+        flex-direction: column;
+    }
+
+    .slogan {
+        padding: 60px 20px;
+    }
+
+    .section__title,
+    .section__description {
+        font-size: 24px;
+        text-align: left;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .footer__social {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hamburger-content {
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header__nav ul {
+        flex-direction: column;
+    }
+}
+
+/* Estilos para programas */
+.programas__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.programas__item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px); /* Tres columnas con espacio entre ellas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 300px; /* Altura fija para hacerlas cuadradas */
+}
+
+.card__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card__description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.card__list {
+    padding-left: 0;
+    text-align: left;
+}
+
+.card__list-item {
+    margin-bottom: 10px;
+}
+
+.card__list-link {
+    color: #e74c3c;
+    transition: color 0.3s;
+}
+
+.card__list-link:hover {
+    color: #c0392b;
+}
+
+@media (max-width: 768px) {
+    .programas__item {
+        width: 100%; /* Una columna en dispositivos móviles */
+        height: auto; /* Altura automática en dispositivos móviles */
+    }
+}
