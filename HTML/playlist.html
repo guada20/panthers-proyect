@@ -6,8 +6,8 @@
     <title>Playlist</title>
     <link rel="stylesheet" href="../assets/Fontawesome/all.css">
     <link rel="stylesheet" href="../assets/Bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="../css/books.css">
-    <link rel="stylesheet" href="../css/playlist.css">
+    <link rel="stylesheet" href="../CSS/books.css">
+    <link rel="stylesheet" href="../CSS/playlist.css">
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,
     100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
@@ -31,7 +31,7 @@
         <label for="menu-toggle" class="sidebar__close-btn"><i class="fa-solid fa-bars"></i></label>
         <ul class="sidebar__list">
             <li class="sidebar__item"><a href="#" class="sidebar__link">Nosotros</a></li>
-            <li class="sidebar__item"><a href="#" class="sidebar__link">Materiales</a></li>
+            <li class="sidebar__item"><a href="./resources.html" class="sidebar__link">Materiales</a></li>
             <li class="sidebar__item"><a href="#" class="sidebar__link">Ayuda</a></li>
             <li class="sidebar__item"><a href="#" class="sidebar__link">Contactenos</a></li>
         </ul>
@@ -43,6 +43,9 @@
     </section>
     <section class="sectionplaylist">
         <div class="content-container">
+            <div class="orange-circle"  id="orange-circle">
+                <span class="rightside-menu-icon" id="rightside-menu-icon">☰</span>
+            </div>
             <aside id="rightside" class="rightside">
                 <ul class="rightside_list">
                     <li class="rightside_item"><a href="./books.html" class="rightside_link"><i class="fa-solid fa-book-open"></i> Libros</a></li>
@@ -51,6 +54,7 @@
                     <li class="rightside_item"><a href="#" class="rightside_link"><i class="fa-solid fa-question"></i> Ayuda</a></li>
                 </ul>
             </aside>
+            <div class="overlay"></div>
             <div class="playlist-container">
                 <div class="playlist">
                     <iframe src='https://widget.spreaker.com/player?episode_id=54113781&theme=dark&chapters-image=true'
@@ -101,11 +105,11 @@
               <img src="../assets/imagenes/SPC_Horizontal_Color.png" alt="logo" class="header__logo-img">
           </div>
           <div class="networks">
-               <a href="https://www.instagram.com/secretosparacontar/" class="network_link"><i class="fa-brands fa-instagram"></i> Instagram</a>
-               <a href="https://www.facebook.com/secretosparacontar" class="network_link"><i class="fa-brands fa-facebook"></i> Facebook</a>
-               <a href="https://x.com/Secretoscontar" class="network_link"><i class="fa-brands fa-x-twitter"></i> X</a>
-               <a href="https://www.youtube.com/user/fundasecretos" class="network_link"><i class="fa-brands fa-youtube"></i> Youtube</a>
-               <a href="https://secretosparacontar.org/" class="network_link"> https://secretosparacontar.org/</a>
+               <a href="https://www.instagram.com/secretosparacontar/" target="_blank" class="network_link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+               <a href="https://www.facebook.com/secretosparacontar" target="_blank" class="network_link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+               <a href="https://x.com/Secretoscontar" target="_blank" class="network_link"><i class="fa-brands fa-x-twitter"></i> X</a>
+               <a href="https://www.youtube.com/user/fundasecretos" target="_blank" class="network_link"><i class="fa-brands fa-youtube"></i> Youtube</a>
+               <a href="https://secretosparacontar.org/" target="_blank" class="network_link"> https://secretosparacontar.org/</a>
           </div>
           <div class="location">
               <p class="textloc">Calle 11A #43B - 41
@@ -118,6 +122,7 @@
           </div>
         </footer>
   </section>   
+<script src="../JS/books.js"></script>
 <script src="../assets/Fontawesome/all.js"></script>
 <script src="../assets/Bootstrap/bootstrap.js"></script>
 </body>
