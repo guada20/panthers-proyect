@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books</title>
+    <title>Libros</title>
     <link rel="stylesheet" href="../assets/Fontawesome/all.css">
     <link rel="stylesheet" href="../assets/Bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="../css/books.css">
+    <link rel="stylesheet" href="../CSS/books.css">
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,
     100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
@@ -30,7 +30,7 @@
         <label for="menu-toggle" class="sidebar__close-btn"><i class="fa-solid fa-bars"></i></label>
         <ul class="sidebar__list">
             <li class="sidebar__item"><a href="#" class="sidebar__link">Nosotros</a></li>
-            <li class="sidebar__item"><a href="#" class="sidebar__link">Materiales</a></li>
+            <li class="sidebar__item"><a href="./resources.html" class="sidebar__link">Materiales</a></li>
             <li class="sidebar__item"><a href="#" class="sidebar__link">Ayuda</a></li>
             <li class="sidebar__item"><a href="#" class="sidebar__link">Contactenos</a></li>
         </ul>
@@ -41,185 +41,74 @@
      <div class="overlay"></div>
     </section>
     <section class="sectionbooks">
+        <div class="orange-circle"  id="orange-circle">
+            <span class="rightside-menu-icon" id="rightside-menu-icon">☰</span>
+        </div>
         <aside id="rightside" class="rightside">
-            <ul class="rightside_list">
-                <li class="rightside_item"><a href="./books.html" class="rightside_link"><i class="fa-solid fa-book-open"></i> Libros</a></li>
-                <li class="rightside_item"><a href="./playlist.html" class="rightside_link"><i class="fa-solid fa-volume-high"></i> AudioLibros</a></li>
-                <li class="rightside_item"><a href="./saved_books.html" class="rightside_link"><i class="fa-solid fa-book-bookmark"></i> Mi historial</a></li>
-                <li class="rightside_item"><a href="#" class="rightside_link"><i class="fa-solid fa-question"></i> Ayuda</a></li>
+            <ul class="rightside_list" id="rightside_list">
+                <li class="rightside_item" id="rightside_item"><a href="./books.html" class="rightside_link" id="rightside_link"><i class="fa-solid fa-book-open"></i> Libros</a></li>
+                <li class="rightside_item" id="rightside_item"><a href="./playlist.html" class="rightside_link" id="rightside_link"><i class="fa-solid fa-volume-high"></i> AudioLibros</a></li>
+                <li class="rightside_item" id="rightside_item"><a href="./saved_books.html" class="rightside_link" id="rightside_link"><i class="fa-solid fa-book-bookmark"></i> Mi historial</a></li>
+                <li class="rightside_item" id="rightside_item"><a href="#" class="rightside_link" id="rightside_link"><i class="fa-solid fa-question"></i> Ayuda</a></li>
             </ul>
         </aside>
-        <div class="infobook-container">
-            <div class="infobook">
-                <div class="infobook_image">
-                    <img src="../assets/imagenes/libroport.png" alt="portada libro" class="imgbook">
-                </div>
-                <div class="infobook_details">
-                    <h3 class="titlebook">Entre cuento y cuento</h3>
-                    <a href="#" class="btnhear">ESCUCHAR</a>
-                    <div class="score">
-                        <span data-rating="1">&#9733;</span>
-                        <span data-rating="2">&#9733;</span>
-                        <span data-rating="3">&#9733;</span>
-                        <span data-rating="4">&#9733;</span>
-                        <span data-rating="5">&#9733;</span>
-                    </div>
-                    <a href="#" class="btnsave"><i class="fa-regular fa-bookmark"></i></a>
-                </div> 
+        <div>
+            <div class="search-container" id="search-container">
+                <form class="search-form" id="search-form" onsubmit="searchBook(event)">
+                    <input type="text" id="searchInput" placeholder="Buscar libro..." name="search">
+                    <button type="submit" id="submit">Buscar</button>
+                </form>
             </div>
-
-            <div class="infobook">
-                <div class="infobook_image">
-                    <img src="../assets/imagenes/libroport.png" alt="portada libro" class="imgbook">
-                </div>
-                <div class="infobook_details">
-                    <h3 class="titlebook">Entre cuento y cuento</h3>
-                    <a href="#" class="btnhear">ESCUCHAR</a>
-                    <div class="score">
-                        <span data-rating="1">&#9733;</span>
-                        <span data-rating="2">&#9733;</span>
-                        <span data-rating="3">&#9733;</span>
-                        <span data-rating="4">&#9733;</span>
-                        <span data-rating="5">&#9733;</span>
-                    </div>
-                    <a href="#" class="btnsave"><i class="fa-regular fa-bookmark"></i></a>
-                </div> 
+            <div class="infobook-container" id="infobook-container">
+                
             </div>
-
-            <div class="infobook">
-                <div class="infobook_image">
-                    <img src="../assets/imagenes/libroport.png" alt="portada libro" class="imgbook">
-                </div>
-                <div class="infobook_details">
-                    <h3 class="titlebook">Entre cuento y cuento</h3>
-                    <a href="#" class="btnhear">ESCUCHAR</a>
-                    <div class="score">
-                        <span data-rating="1">&#9733;</span>
-                        <span data-rating="2">&#9733;</span>
-                        <span data-rating="3">&#9733;</span>
-                        <span data-rating="4">&#9733;</span>
-                        <span data-rating="5">&#9733;</span>
-                    </div>
-                    <a href="#" class="btnsave"><i class="fa-regular fa-bookmark"></i></a>
-                </div> 
-            </div>
-
-            <div class="infobook">
-                <div class="infobook_image">
-                    <img src="../assets/imagenes/libroport.png" alt="portada libro" class="imgbook">
-                </div>
-                <div class="infobook_details">
-                    <h3 class="titlebook">Entre cuento y cuento</h3>
-                    <a href="#" class="btnhear">ESCUCHAR</a>
-                    <div class="score">
-                        <span data-rating="1">&#9733;</span>
-                        <span data-rating="2">&#9733;</span>
-                        <span data-rating="3">&#9733;</span>
-                        <span data-rating="4">&#9733;</span>
-                        <span data-rating="5">&#9733;</span>
-                    </div>
-                    <a href="#" class="btnsave"><i class="fa-regular fa-bookmark"></i></a>
-                </div> 
-            </div>
-
-            <div class="infobook">
-                <div class="infobook_image">
-                    <img src="../assets/imagenes/libroport.png" alt="portada libro" class="imgbook">
-                </div>
-                <div class="infobook_details">
-                    <h3 class="titlebook">Entre cuento y cuento</h3>
-                    <a href="#" class="btnhear">ESCUCHAR</a>
-                    <div class="score">
-                        <span data-rating="1">&#9733;</span>
-                        <span data-rating="2">&#9733;</span>
-                        <span data-rating="3">&#9733;</span>
-                        <span data-rating="4">&#9733;</span>
-                        <span data-rating="5">&#9733;</span>
-                    </div>
-                    <a href="#" class="btnsave"><i class="fa-regular fa-bookmark"></i></a>
-                </div> 
-            </div>
-
-            <div class="infobook">
-                <div class="infobook_image">
-                    <img src="../assets/imagenes/libroport.png" alt="portada libro" class="imgbook">
-                </div>
-                <div class="infobook_details">
-                    <h3 class="titlebook">Entre cuento y cuento</h3>
-                    <a href="#" class="btnhear">ESCUCHAR</a>
-                    <div class="score">
-                        <span data-rating="1">&#9733;</span>
-                        <span data-rating="2">&#9733;</span>
-                        <span data-rating="3">&#9733;</span>
-                        <span data-rating="4">&#9733;</span>
-                        <span data-rating="5">&#9733;</span>
-                    </div>
-                    <a href="#" class="btnsave"><i class="fa-regular fa-bookmark"></i></a>
-                </div> 
-            </div>
-
-            <div class="infobook">
-                <div class="infobook_image">
-                    <img src="../assets/imagenes/libroport.png" alt="portada libro" class="imgbook">
-                </div>
-                <div class="infobook_details">
-                    <h3 class="titlebook">Entre cuento y cuento</h3>
-                    <a href="#" class="btnhear">ESCUCHAR</a>
-                    <div class="score">
-                        <span data-rating="1">&#9733;</span>
-                        <span data-rating="2">&#9733;</span>
-                        <span data-rating="3">&#9733;</span>
-                        <span data-rating="4">&#9733;</span>
-                        <span data-rating="5">&#9733;</span>
-                    </div>
-                    <a href="#" class="btnsave"><i class="fa-regular fa-bookmark"></i></a>
-                </div> 
-            </div>
-
-            <div class="infobook">
-                <div class="infobook_image">
-                    <img src="../assets/imagenes/libroport.png" alt="portada libro" class="imgbook">
-                </div>
-                <div class="infobook_details">
-                    <h3 class="titlebook">Entre cuento y cuento</h3>
-                    <a href="#" class="btnhear">ESCUCHAR</a>
-                    <div class="score">
-                        <span data-rating="1">&#9733;</span>
-                        <span data-rating="2">&#9733;</span>
-                        <span data-rating="3">&#9733;</span>
-                        <span data-rating="4">&#9733;</span>
-                        <span data-rating="5">&#9733;</span>
-                    </div>
-                    <a href="#" class="btnsave"><i class="fa-regular fa-bookmark"></i></a>
-                </div> 
-            </div>
-            
         </div>
     </section>
     <section class="footerbooks">
-          <footer class="footerinfo">
-            <div class="header__logo">
-                <img src="../assets/imagenes/SPC_Horizontal_Color.png" alt="logo" class="header__logo-img">
+          <footer class="footerinfo" id="footerinfo">
+            <div class="header__logo" id="header__logo">
+                <img src="../assets/imagenes/SPC_Horizontal_Color.png" alt="logo" class="header__logo-img" id="header__logo-img">
             </div>
             <div class="networks">
-                 <a href="https://www.instagram.com/secretosparacontar/" class="network_link"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                 <a href="https://www.facebook.com/secretosparacontar" class="network_link"><i class="fa-brands fa-facebook"></i> Facebook</a>
-                 <a href="https://x.com/Secretoscontar" class="network_link"><i class="fa-brands fa-x-twitter"></i> X</a>
-                 <a href="https://www.youtube.com/user/fundasecretos" class="network_link"><i class="fa-brands fa-youtube"></i> Youtube</a>
-                 <a href="https://secretosparacontar.org/" class="network_link"> https://secretosparacontar.org/</a>
+                 <a href="https://www.instagram.com/secretosparacontar/" target="_blank" class="network_link" id="network_link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                 <a href="https://www.facebook.com/secretosparacontar"  target="_blank" class="network_link" id="network_link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                 <a href="https://x.com/Secretoscontar" target="_blank" class="network_link" id="network_link"><i class="fa-brands fa-x-twitter"></i> X</a>
+                 <a href="https://www.youtube.com/user/fundasecretos" target="_blank" class="network_link" id="network_link"><i class="fa-brands fa-youtube"></i> Youtube</a>
+                 <a href="https://secretosparacontar.org/" target="_blank" class="network_link" id="network_link"> https://secretosparacontar.org/</a>
             </div>
-            <div class="location">
-                <p class="textloc">Calle 11A #43B - 41
+            <div class="location" id="location">
+                <p class="textloc" id="textloc">Calle 11A #43B - 41
                     <br>
                     Barrio Manila
                     <br>
                     Medellín, Colombia
                 </p>
-                <img src="../assets/imagenes/map.jfif" alt="logo" class="img_map">
+                <img src="../assets/imagenes/map.jfif" alt="logo" class="img_map" id="img_map">
             </div>
           </footer>
     </section>
-    
+    <template id="book-template">
+        <div class="infobook">
+            <div class="infobook_image" id="infobook_image">
+                <img src="" alt="portada libro" class="imgbook" id="imgbook">
+            </div>
+            <div class="infobook_details" id="infobook_details">
+                <h3 class="titlebook" id="titlebook"></h3>
+                <a href="#" class="btnhear" id="btnhear">LEER</a>
+                <div class="score" id="score">
+                    <span data-rating="1">&#9733;</span>
+                    <span data-rating="2">&#9733;</span>
+                    <span data-rating="3">&#9733;</span>
+                    <span data-rating="4">&#9733;</span>
+                    <span data-rating="5">&#9733;</span>
+                </div>
+                <a href="#" class="btnsave" id="btnsave"><i class="fa-solid fa-heart"></i></a>
+            </div> 
+        </div>
+    </template>
+    <div class="overlay"></div>
+<script src="../JS/books.js"></script>
+<script src="../JS/rating.js"></script>
 <script src="../assets/Fontawesome/all.js"></script>
 <script src="../assets/Bootstrap/bootstrap.js"></script>
 </body>

@@ -178,6 +178,30 @@ body, html {
     padding-top: 2em;
     z-index: 1; 
 }
+ 
+.orange-circle{
+    display: none;
+    background-color: #FA4616;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position:initial;
+    bottom: 10em;
+    left: 2em;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.rightside-menu-icon {
+    display: none;
+    color: black;
+    text-align: center;
+    padding: 0.3em;
+    z-index: 1001;
+}
 
 .rightside_list {
     list-style-type: none;
@@ -212,12 +236,52 @@ body, html {
     border-bottom: 0.2em solid black;
 }
 
+
+/*buscador*/
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%; 
+}
+
+.search-form {
+    display: flex; 
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 60%; 
+    max-width: 300px; 
+    margin-right: 10px; 
+}
+
+.search-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #618EB4;
+    color: black;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    border-bottom: #000 0.2em solid;
+}
+
+
 /* Contenedor de infobooks */
 .infobook-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-top: 2em;
+    width: 100%;
 }
 
 .infobook {
@@ -243,6 +307,7 @@ body, html {
     width: 100%;
     height: auto;
     margin-bottom: 1em;
+    border: solid black 0.1em;
 }
 
 .titlebook {
@@ -282,13 +347,13 @@ body, html {
 
 .btnsave {
     font-size: 1.5em;
-    color: #000;
+    color: rgba(255, 0, 0, 0.5);;
     margin-top: 1em;
     text-decoration: none;
 }
 
 .btnsave:hover {
-    color: black;
+    color: red;
 }
 
 /* Footer */
@@ -343,10 +408,148 @@ body, html {
     width: 13em;
 }
 
+.confirmation-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+
 /* Media Queries */
+ 
+/* Media Query para pantallas grandes */
+@media(min-width:1600px){
+    .header {
+        flex-direction: row;
+        padding: 0.5em;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__logo-img {
+        width: 10em;
+        height: auto;
+        display: block;
+    }
+
+    .header__nav-link {
+        width: 8em;
+        font-size: 1.2em;
+        z-index: 8;
+    }
+
+    .footerbooks .header__logo-img {
+        width: 16em;
+        height: auto;
+        display: block;
+    }
+    
+    .footerinfo{
+      gap: 20em;
+    }
+
+    .networks{
+        width: 27em;
+        height: auto;
+    }
+
+    .network_link {
+        width: 23em;
+    }
+     
+    .location{
+     gap: 3em;
+    }
+
+    .img_map {
+        width: 15em;
+        height: auto;
+    }
+
+    .textloc{
+        font-size: 1.3em;
+    }
+
+    .header__nav {
+        margin-left: 1em;
+        z-index: 30;
+    }
+
+    .header__nav-list {
+        gap: 1em;
+        font-size: 0.8em;
+        z-index: 20;
+    }
+
+    .sectionbooks {
+        grid-template-rows: 1fr;
+    }
+
+    .rightside {
+        width: 100%;
+        height: 33em;
+        order: -1;
+        padding-top: 1em;
+        z-index: 5;
+    }
+    
+    .orange-circle,
+    .rightside-menu-icon {
+    display:none;
+    }
+
+    .rightside_list,
+    .rightside_item {
+        text-align: center;
+        gap: 0.01em;
+        z-index: 1;
+    }
+
+    .infobook {
+        flex-direction: row;
+    }
+
+    .infobook_image {
+        width: 50%;
+        height: auto;
+        align-items: center;
+    }
+
+    .infobook_details {
+        width: 60%;
+        margin-left: 0;
+    }
+
+    .footerbooks {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        display: block;
+        height: auto;
+        gap: 3em;
+    }
+
+    .footerinfo {
+        flex-direction: row;
+        gap: 5em;
+        align-items: center;
+    }
+
+    .location {
+        flex-direction: row;
+        gap: 1em;
+    }
+}
 
 /* Media Query para tablet */
-@media (max-width: 1025px) {
+@media (max-width: 1024px) {
     .header {
         flex-direction: row;
         padding: 0.5em;
@@ -390,13 +593,50 @@ body, html {
     .sectionbooks {
         grid-template-columns: 1fr;
     }
+    
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 30; 
+    }
+    
+    .overlay.active {
+        display: block;
+    }
 
     .rightside {
-        width: 100%;
-        height: 33em;
+        width: 16em;
+        height: 38em;
+        background-color: #E7E5D9;
+        border: solid 0.1em black;
+        display: flex;
+        gap: 2em;
         order: -1;
-        padding-top: 1em;
-        z-index: 5;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 2em;
+        z-index: 200;
+        position: fixed;
+        top: 6.7em;
+        left: -16em; 
+        transition: right 0.3s;
+    }
+    
+    .rightside.active {
+        left: 0; /* Mostrar el rightside moviéndolo a la posición 0 */
+    }
+
+    .orange-circle{
+      display: flex;
+    }
+
+    .rightside-menu-icon {
+        display: block;
+        color: black;
     }
 
     .rightside_list,
@@ -488,14 +728,53 @@ body, html {
         display: flex;
         flex-direction: column;
     }
+     
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 50;  
+    }
+    
+    .overlay.active {
+        display: block;
+    }
 
     .rightside {
-        width: 100%;
-        height: auto;
+        width: 16em;
+        height: 38em;
+        background-color: #E7E5D9;
+        border: solid 0.1em black;
+        display: flex;
+        gap: 2em;
         order: -1;
-        padding-top: 1em;
-        z-index: 5;
-        position: relative;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 2em;
+        z-index: 200;
+        position: fixed;
+        top: 4.5em;
+        left: -16em; 
+        transition: right 0.3s;
+    }
+    
+    .rightside.active {
+        left: 0; /* Mostrar el rightside moviéndolo a la posición 0 */
+    }
+
+    .orange-circle{
+        display: block;
+        z-index: 700;
+    }
+
+    .rightside-menu-icon {
+        display: block;
+        color: #000;
+        z-index: 800;
     }
 
     .rightside_list,
@@ -503,7 +782,16 @@ body, html {
         text-align: center;
         z-index: 1;
     }
-
+    
+    .search-container {
+        order: 2; 
+    }
+    
+    .infobook-container{
+        order: 3;
+        display: flex;
+        flex-direction: column;
+    }
     .infobook {
         flex-direction: row;
         gap: 1em;
