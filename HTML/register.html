@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Secretos para contar</title>
+    <link rel="stylesheet" type="text/css" href="/CSS_files/styles.css">
+</head>
+<body>
+    <div class="body-contenedor">
+        <div class="contenedor-sesion">
+            <div class="seccion">
+                <div class="titulo-seccion">
+                    <img src="/IMG_files/logo.png" alt="Logo" width="100px"> 
+                    <h5>Formulario de registro</h5>
+                </div>
+                <form autocomplete="off" class="form-secion" action="#" method="post" accept-charset="utf-8">
+                    <div class="form-input">
+                        <input type="text" placeholder="Nombre" pattern="[A-Za-z0-9 ]{1,30}" required>
+                        <div class="icono">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <input type="email" placeholder="Correo" required>
+                        <div class="icono">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <input type="password" placeholder="Contraseña" minlength="6" required>
+                        <div class="icono">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <input type="text" placeholder="Teléfono" pattern="[0-9]{10}" required>
+                        <div class="icono">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <input type="text" placeholder="Dirección" required>
+                        <div class="icono">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                    </div>
+                    </div>
+                    <button type="submit" class="btn-form registro">Registrar</button>
+                </form>
+                <div style="text-align: center; margin-top: 1rem;">
+                    ¿Ya tienes una cuenta creada? Inicia Sesión <a href="login.html">aquí</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
