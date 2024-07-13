@@ -1,0 +1,177 @@
+/* Estilos generales */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Contenedor principal */
+.body-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+/* Estilo para el contenedor del breadcrumb */
+.breadcrumb {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ECEAD3;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+    z-index: 10;
+}
+
+.breadcrumb a {
+    color: #002847;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el contenedor de sesión */
+.contenedor-sesion {
+    background-color: #f7f5eb;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(15, 18, 207, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid #002847;
+}
+
+/* Estilos para la estructura del título */
+.titulo-seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor del logo */
+.logo-container {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 0px;
+}
+
+/* Estilo para la imagen del logo */
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+/* Formulario de sesión */
+.form-sesion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Entradas del formulario */
+.form-input {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.form-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Icono dentro de la entrada */
+.icono {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Botón del formulario */
+.btn-form {
+    background-color: #fa4616;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Opciones sociales */
+.opciones-sociales {
+    margin-top: 20px;
+}
+
+.botones-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Botón social */
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #618eb4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-social:hover {
+    background-color: #002847;
+}
+
+/* Crear cuenta */
+.crear-cuenta {
+    margin-top: 20px;
+}
+
+.crear-cuenta a {
+    color: #002847;
+    text-decoration: none;
+}
+
+.crear-cuenta a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 600px) {
+    .contenedor-sesion {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .breadcrumb {
+        top: 10px;
+        right: 10px;
+        font-size: 0.8em;
+    }
+
+    .btn-form, .btn-social {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
