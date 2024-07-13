@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../assets/Fontawesome/all.css">
     <link rel="stylesheet" href="../assets/Bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../CSS/books.css">
+    <link rel="stylesheet" href="../CSS/contactUs.css">
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,
     100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
@@ -32,47 +33,81 @@
             <li class="sidebar__item"><a href="#" class="sidebar__link">Nosotros</a></li>
             <li class="sidebar__item"><a href="./resources.html" class="sidebar__link">Materiales</a></li>
             <li class="sidebar__item"><a href="#" class="sidebar__link">Ayuda</a></li>
-            <li class="sidebar__item"><a href="#" class="sidebar__link">Contactenos</a></li>
+            <li class="sidebar__item"><a href="./contact_us.html" class="sidebar__link">Contactenos</a></li>
         </ul>
         <div class="sidebar__logo">
             <img src="../assets/imagenes/SPC_Horizontal_Color.png" alt="Aside Logo" class="sidebar__logo-img">
         </div>
      </aside>
-     <div class="overlay"></div>
     </section>
-    <section class="contact_us">
-       <div class="contactus__form">
-          <h2 class="title_form">Contactanos</h2>
-          <p class="text_form">Quieres que nos comuniquemos contigo?
-            Dejanos tus datos</p>
-
-       </div>
-
+    <section class="sectioncontact" id="sectioncontact">
+        <section class="contact_us" id="contact_us">
+            <div class="breadcrumb">
+                <a href="./index.html">&lt; Volver a inicio</a>
+            </div>
+            <div class="contactus__form" id="contactus__form">
+               <h2 class="title_form" id="title_form">Contactanos</h2>
+               <p class="text_form" id="text_form">Quieres que nos comuniquemos contigo?
+                 Dejanos tus datos</p>
+                 <form id="contactForm" class="contactForm">
+                     <label for="nombre" class="form_label" id="name_label">Nombre:</label>
+                     <input type="text" id="nombre" name="nombre" class="input" placeholder="Ingrese su nombre" required>
+             
+                     <label for="email" class="form_label">Email:</label>
+                     <input type="email" id="email" name="email" class="input" placeholder="Ingrese su correo electrónico" required>
+             
+                     <label for="telefono" class="form_label">Teléfono:</label>
+                     <input type="tel" id="telefono" name="telefono" class="input" placeholder="Ingrese su número de teléfono">
+             
+                     <label for="mensaje" class="form_label">Mensaje:</label>
+                     <textarea id="mensaje" name="mensaje" class="input" placeholder="Escriba su mensaje aquí" required></textarea>
+             
+                     <input type="submit" value="Enviar" class="btn_submit_contact" id="btn_submit_contact">
+                 </form>
+                 <div id="confirmation_message" class="mensaje-exito"></div>
+            </div>
+        </section>
+         <section class="address_and_networks" id="address_and_networks">
+               <div class="address_contact">
+                  <a href="https://www.instagram.com/secretosparacontar/" target="_blank" class="network_contact"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                  <a href="https://www.facebook.com/secretosparacontar"  target="_blank" class="network_contact"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                  <a href="https://x.com/Secretoscontar" target="_blank" class="network_contact"><i class="fa-brands fa-x-twitter"></i> X</a>
+                  <a href="https://www.youtube.com/user/fundasecretos" target="_blank" class="network_contact"><i class="fa-brands fa-youtube"></i> Youtube</a>
+                  <a href="https://secretosparacontar.org/" target="_blank" class="network_contact"><i class="fa-solid fa-link"></i> https://secretosparacontar.org/</a>
+                  <a href="mailto:info@secretosparacontar.org" target="_blank" class="network_contact"><i class="fa-solid fa-envelope"></i>info@secretosparacontar.org</a>
+               </div>
+               <div class="img_contacts">
+                  <img src="../assets/imagenes/foto-contact.jpeg" class="img_contact" id="img_contact" alt="">
+               </div>
+         </section>
     </section>
     <section class="footerbooks">
-          <footer class="footerinfo">
-            <div class="header__logo">
-                <img src="../assets/imagenes/SPC_Horizontal_Color.png" alt="logo" class="header__logo-img">
-            </div>
-            <div class="networks">
-                 <a href="https://www.instagram.com/secretosparacontar/" target="_blank" class="network_link"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                 <a href="https://www.facebook.com/secretosparacontar"  target="_blank" class="network_link"><i class="fa-brands fa-facebook"></i> Facebook</a>
-                 <a href="https://x.com/Secretoscontar" target="_blank" class="network_link"><i class="fa-brands fa-x-twitter"></i> X</a>
-                 <a href="https://www.youtube.com/user/fundasecretos" target="_blank" class="network_link"><i class="fa-brands fa-youtube"></i> Youtube</a>
-                 <a href="https://secretosparacontar.org/" target="_blank" class="network_link"> https://secretosparacontar.org/</a>
-            </div>
-            <div class="location">
-                <p class="textloc">Calle 11A #43B - 41
-                    <br>
-                    Barrio Manila
-                    <br>
-                    Medellín, Colombia
-                </p>
-                <img src="../assets/imagenes/map.jfif" alt="logo" class="img_map">
-            </div>
-          </footer>
-    </section>
+        <footer class="footerinfo" id="footerinfo">
+          <div class="footer_img" id="footer_img">
+              <img src="../assets/imagenes/SPC_Horizontal_Color.png" alt="logo" class="footer_img_img" id="footer_img">
+          </div>
+          <div class="networks">
+               <a href="https://www.instagram.com/secretosparacontar/" target="_blank" class="network_link" id="network_link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+               <a href="https://www.facebook.com/secretosparacontar"  target="_blank" class="network_link" id="network_link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+               <a href="https://x.com/Secretoscontar" target="_blank" class="network_link" id="network_link"><i class="fa-brands fa-x-twitter"></i> X</a>
+               <a href="https://www.youtube.com/user/fundasecretos" target="_blank" class="network_link" id="network_link"><i class="fa-brands fa-youtube"></i> Youtube</a>
+               <a href="https://secretosparacontar.org/" target="_blank" class="network_link" id="network_link"> https://secretosparacontar.org/</a>
+          </div>
+          <div class="location" id="location">
+              <h5><b>Dirección y teléfono</b></h5>
+              <p class="textloc" id="textloc">Calle 11A #43B - 41
+                  <br>
+                  Barrio Manila
+                  <br>
+                  Medellín, Colombia
+                  <br>
+                  (57) 604 322 06 90
+              </p>
+          </div>
+        </footer>
+  </section>
     
+<script src="../JS/contactUs.js"></script>
 <script src="../assets/Fontawesome/all.js"></script>
 <script src="../assets/Bootstrap/bootstrap.js"></script>
 </body>
