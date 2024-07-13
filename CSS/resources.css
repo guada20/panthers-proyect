@@ -108,6 +108,23 @@ body, html {
     max-width: 100%;
 }
 
+.breadcrumb{
+    top: 1em;
+    left: 5em;
+    background-color: #ECEAD3;
+    padding: 1em 1em;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+    width: 10em;
+}
+
+.breadcrumb a {
+    color: #002847;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
 /*mediada para equipos moviles*/
 @media (max-width: 767px) {
     .title_table {

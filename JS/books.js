@@ -143,7 +143,7 @@ function showConfirmationMessage(message) {
 }
 
 function searchBook(event) {
-    event.preventDefault(); // Previene el envío del formulario y la recarga de la página
+    event.preventDefault(); 
 
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
     const infobookContainer = document.getElementById('infobook-container');
@@ -154,7 +154,7 @@ function searchBook(event) {
     // Filtra los libros que coinciden con la búsqueda
     const filteredBooks = books.filter(book => book.title.toLowerCase().includes(searchInput));
 
-    // Añade los libros filtrados al contenedor
+    // Añade los libros filtrados 
     filteredBooks.forEach(book => {
         const bookElement = createBookElement(book);
         infobookContainer.appendChild(bookElement);
