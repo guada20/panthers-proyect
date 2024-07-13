@@ -112,56 +112,23 @@ function removeSavedBook(bookId) {
     localStorage.setItem('savedBooks', JSON.stringify(savedBooks));
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const infobookContainer = document.querySelector('.infobook-container');
-    books.forEach(book => {
-        const bookElement = createBookElement(book);
-        infobookContainer.appendChild(bookElement);
+function attachSaveEventListeners() {
+    document.querySelectorAll('.btnsave').forEach(btn => {
+        btn.addEventListener('click', function(event) {
+            const bookDiv = btn.closest('.infobook');
+            saveBook(bookDiv);
+        });
     });
+}
 
-    function attachSaveEventListeners() {
-        document.querySelectorAll('.btnsave').forEach(btn => {
-            btn.addEventListener('click', function(event) {
-                const bookDiv = btn.closest('.infobook');
-                saveBook(bookDiv);
-            });
-        });
-    }
-
-    function checkSavedBooks() {
-        let savedBooks = JSON.parse(localStorage.getItem('savedBooks')) || [];
-        document.querySelectorAll('.infobook').forEach(bookDiv => {
-            const bookId = bookDiv.getAttribute('data-book-id');
-            if (savedBooks.some(book => book.id === bookId)) {
-                bookDiv.querySelector('.btnsave').classList.add('saved');
-            }
-        });
-    }
-
-    attachSaveEventListeners();
-    checkSavedBooks();
-    updateSavedBooksTable();
-});
-
-
-//mensaje estilizado
-function saveBook(bookDiv) {
-    const bookId = bookDiv.getAttribute('data-book-id');
-    const bookTitle = bookDiv.querySelector('.titlebook').textContent;
-    const bookImage = bookDiv.querySelector('.imgbook').src;
-    const bookData = { id: bookId, title: bookTitle, image: bookImage };
-
+function checkSavedBooks() {
     let savedBooks = JSON.parse(localStorage.getItem('savedBooks')) || [];
-    const isBookSaved = savedBooks.some(book => book.id === bookId);
-
-    if (!isBookSaved) {
-        savedBooks.push(bookData);
-        localStorage.setItem('savedBooks', JSON.stringify(savedBooks));
-        showConfirmationMessage('Libro guardado correctamente!');
-        bookDiv.querySelector('.btnsave').classList.add('saved');
-    } else {
-        showConfirmationMessage('Este libro ya está guardado.');
-    }
+    document.querySelectorAll('.infobook').forEach(bookDiv => {
+        const bookId = bookDiv.getAttribute('data-book-id');
+        if (savedBooks.some(book => book.id === bookId)) {
+            bookDiv.querySelector('.btnsave').classList.add('saved');
+        }
+    });
 }
 
 function showConfirmationMessage(message) {
@@ -170,11 +137,45 @@ function showConfirmationMessage(message) {
     confirmationDiv.textContent = message;
     document.body.appendChild(confirmationDiv);
 
-    // Desaparecer el mensaje después de 2 segundos
     setTimeout(() => {
         confirmationDiv.remove();
     }, 2000);
 }
+
+function searchBook(event) {
+    event.preventDefault(); // Previene el envío del formulario y la recarga de la página
+
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+    const infobookContainer = document.getElementById('infobook-container');
+
+    // Limpia el contenedor de libros
+    infobookContainer.innerHTML = '';
+
+    // Filtra los libros que coinciden con la búsqueda
+    const filteredBooks = books.filter(book => book.title.toLowerCase().includes(searchInput));
+
+    // Añade los libros filtrados al contenedor
+    filteredBooks.forEach(book => {
+        const bookElement = createBookElement(book);
+        infobookContainer.appendChild(bookElement);
+    });
+
+    // Vuelve a adjuntar los event listeners a los botones de guardar
+    attachSaveEventListeners();
+    checkSavedBooks();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const infobookContainer = document.querySelector('.infobook-container');
+    books.forEach(book => {
+        const bookElement = createBookElement(book);
+        infobookContainer.appendChild(bookElement);
+    });
+
+    attachSaveEventListeners();
+    checkSavedBooks();
+    updateSavedBooksTable();
+});
 
 
 
@@ -199,34 +200,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
- // Otras funciones 
- //click en btnsave para guardar la informacion de libro guardado en localstorage
-/*document.addEventListener('DOMContentLoaded', () => {
-
-    function attachSaveEventListeners() {
-        document.querySelectorAll('.btnsave').forEach(btn => {
-            btn.addEventListener('click', function(event) {
-                const bookDiv = btn.closest('.infobook');
-                saveBook(bookDiv);
-            });
-        });
-    }
-
-    function saveBook(bookDiv) {
-        const bookId = bookDiv.getAttribute('data-book-id');
-        const bookTitle = bookDiv.querySelector('.titlebook').textContent;
-        const bookImage = bookDiv.querySelector('.imgbook').src;
-        const bookData = { id: bookId, title: bookTitle, image: bookImage };
-
-        let savedBooks = JSON.parse(localStorage.getItem('savedBooks')) || [];
-        if (!savedBooks.some(book => book.id === bookId)) {
-            savedBooks.push(bookData);
-            localStorage.setItem('savedBooks', JSON.stringify(savedBooks));
-            alert('Libro guardado!');
-        } else {
-            alert('Este libro ya está guardado.');
-        }
-    }
-
-    attachSaveEventListeners();
-});*/

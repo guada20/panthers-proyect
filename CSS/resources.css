@@ -4,6 +4,7 @@ body, html {
     overflow-x: hidden;
     max-width: 100%;
     font-family: 'Be Vietnam Pro', sans-serif;
+    box-sizing: border-box; 
 }
 
 .materials_container {
@@ -11,6 +12,8 @@ body, html {
     margin-left: 20px; 
     display: flex;
     flex-direction: column;
+    gap: 1em;
+    box-sizing: border-box;
 }
 
 .options_container{
@@ -38,9 +41,26 @@ body, html {
   text-align: center;
   font-size: 1em;
 }
-.table_books{
+
+.table_books .row {
     display: flex;
-    flex-direction: column; 
+    padding: 0.1em 0;
+}
+
+.table_books {
+    flex: 1;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.table_books .column_title {
+    font-weight: bold;
+}
+
+.table_books .column a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .row {
@@ -56,6 +76,7 @@ body, html {
    padding: 10px; 
    text-align: center; 
    margin: 5px;
+   box-sizing: border-box;
 }
 
 .column {
@@ -66,4 +87,59 @@ body, html {
     margin: 5px;
     background-color: #ecead3; 
     color: #000;
+    box-sizing: border-box;
+}
+
+.text_table {
+    text-align: center;
+    font-size: 1em;
+    color: #333; 
+}
+
+.categories {
+    margin-bottom: 20px; 
+}
+
+.categories select {
+    padding: 5px;
+    font-size: 16px;
+    display: block; 
+    margin-bottom: 10px; 
+    max-width: 100%;
+}
+
+/*mediada para equipos moviles*/
+@media (max-width: 767px) {
+    .title_table {
+        font-size: 1.5em;
+    }
+
+    .text_table {
+        font-size: 1em;
+    }
+
+    .column_title, .column {
+        font-size: 0.8em;
+        padding: 3px;
+        word-break: break-word; 
+    }
+
+    .option_category {
+        font-size: 1em;
+        height: 0.1em;
+    }
+    
+    .table_books {
+        padding: 0 10px;
+    }
+
+    .table_books .row {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .table_books .column_title,
+    .table_books .column {
+        flex: 1;
+    }
 }

@@ -53,93 +53,27 @@
                 <li class="rightside_item"><a href="#" class="rightside_link"><i class="fa-solid fa-question"></i> Ayuda</a></li>
             </ul>
         </aside>
-        <div class="materials_container">
-            <div class="options_container">
-                <div class="option">
-                    <a href="./books.html"><img src="../assets/imagenes/Libros.png" alt="Libros" class="option_img"></a>
+        <div class="materials_container" id="materials_container">
+            <p class="title_table" id="title_table">Nuestros libros y sus recursos</p>
+                <p class="text_table" id="text_table">En esta tabla puedes ver nuestros libros y cuales recursos tiene cada uno para una mejor experiencia</p>
+    
+                <div class="categories">
+                    <label for="category_select" class="category_select">Seleccionar categoría:</label>
+                    <select class="category_select" id="category_select">
+                        <option class="option_category" value="todos">Todos</option>
+                        <option class="option_category" value="Historia">Historia</option>
+                        <option class="option_category" value="Cuentos y Fantasia">Cuentos y Fantasía</option>
+                        <option class="option_category" value="Reflexión">Reflexión</option>
+                        <option class="option_category" value="Campo y Naturaleza">Campo y Naturaleza</option>
+                        <option class="option_category" value="Literatura y Arte">Literatura y Arte</option>
+                        <option class="option_category" value="Cultura">Cultura</option>
+                        <option class="option_category" value="Salud">Salud</option>
+                        <option class="option_category" value="Universo">Universo</option>
+                        <option class="option_category" value="Hogar">Hogar</option>
+                        <option class="option_category" value="Ciencia">Ciencia</option>
+                    </select>
                 </div>
-                <div class="option">
-                    <a href="./playlist.html"><img src="../assets/imagenes/audiolibro.png" alt="Audiolibro" class="option_img"></a>
-                </div>
-            </div>
-            <div class="table_books">
-                <p class="title_table"> Nuestros libros y sus recursos</p>
-                <p class="text_table">En esta tabla puedes ver nuestros libros y cuales recursos tiene cada uno para una mejor experiencia</p>
-                <div class="row">
-                    <div class="column_title">Nombre</div>
-                    <div class="column_title">PDF</div>
-                    <div class="column_title">Audiolibro</div>
-                </div>
-                <div class="row">
-                    <div class="column">Érase una vez en colombia</div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                </div>
-                <div class="row">
-                    <div class="column">Con los pelos de punta</div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                </div>
-                <div class="row">
-                    <div class="column">Todo lo contrario</div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                </div>
-                <div class="row">
-                    <div class="column">Cuentos para desenredar enredos</div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                </div>
-                <div class="row">
-                    <div class="column">La finca viva</div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                </div>
-                <div class="row">
-                    <div class="column">La casa y el campo</div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                </div>
-                <div class="row">
-                    <div class="column">Historias y lugares</div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                </div>
-                <div class="row">
-                    <div class="column">Lecturas para todos los días</div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                </div>
-                <div class="row">
-                    <div class="column">Planeta vivo</div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                </div>
-                <div class="row">
-                    <div class="column">El hombre y su cultura</div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                </div>
-                <div class="row">
-                    <div class="column">Cuentos y pasatiempos</div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                </div>
-                <div class="row">
-                    <div class="column">Cuentos para contar</div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                    <div class="column"><i class="fa-regular fa-circle-xmark"></i></div>
-                </div>
-                <div class="row">
-                    <div class="column">Los viajes del viejo Jacobo</div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                    <div class="column"><i class="fa-regular fa-circle-xmark"></i></div>
-                </div>
-                <div class="row">
-                    <div class="column">Entre cuento y cuento</div>
-                    <div class="column"><i class="fa-solid fa-check"></i></div>
-                    <div class="column"><i class="fa-regular fa-circle-xmark"></i></div>
-                </div>
+            <div class="table_books" id="table_books">
             </div>
         </div>
 
@@ -169,6 +103,7 @@
     </section>
     <div class="overlay"></div>
 <script src="../JS/books.js"></script>
+<script src="../JS/table_books.js"></script>
 <script src="../assets/Fontawesome/all.js"></script>
 <script src="../assets/Bootstrap/bootstrap.js"></script>
 </body>
