@@ -156,6 +156,60 @@ body, html {
 .crear-cuenta a:hover {
     text-decoration: underline;
 }
+body.dark {
+    background-color: #1e1e1e;
+    color: #FFFFFF;
+  }
+   
+body.dark .container {
+    background-color: #1e1e1e;
+}
+ 
+body.dark .product-card {
+    background-color: #2e2e2e;
+}
+ 
+.toggle {
+    display: none;
+}
+/* Botón de alternancia */
+#toggle-theme {
+    background-color: #ff220a;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#toggle-theme i {
+    margin-right: 10px;
+}
+
+#toggle-theme:hover {
+    background-color: #618EB4;
+}
+/* Estilos adicionales para elementos específicos en tema oscuro */
+.header.dark-mode {
+    background-color: #1f1f1f;
+}
+
+.footerinfo.dark-mode {
+    background-color: #1f1f1f;
+}
+
+.slogan.dark-mode {
+    background-color: #1f1f1f;
+}
+
+.sidebar.dark-mode {
+    background-color: #1f1f1f;
+}
 
 /* Media Queries para dispositivos móviles */
 @media (max-width: 600px) {
