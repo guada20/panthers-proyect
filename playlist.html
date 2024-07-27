@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist</title>
+<<<<<<< HEAD:HTML/playlist.html
     <link rel="stylesheet" href="../assets/Fontawesome/all.css">
     <link rel="stylesheet" href="../assets/Bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../CSS/books.css">
     <link rel="stylesheet" href="../CSS/oscuro.css">
     <link rel="stylesheet" href="../CSS/playlist.css">
+=======
+    <link rel="stylesheet" href="/assets/Fontawesome/all.css">
+    <link rel="stylesheet" href="/assets/Bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/CSS/books.css">
+    <link rel="stylesheet" href="/CSS/playlist.css">
+>>>>>>> origin/developerTwo:playlist.html
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,
     100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
@@ -24,8 +31,8 @@
         </div>
         <nav class="header__nav">
             <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#" class="header__nav-link">Inicio Sesión</a></li>
-                <li class="header__nav-item"><a href="#" class="header__nav-link">Registrate</a></li>
+                <li class="header__nav-item"><a href="login.html" class="header__nav-link">Inicio Sesión</a></li>
+                <li class="header__nav-item"><a href="register.html" class="header__nav-link">Registrate</a></li>
             </ul>
         </nav>
         <label for="menu-toggle" class="header__menu-icon"><i class="fa-solid fa-bars"></i></label>
@@ -34,10 +41,11 @@
      <aside id="sidebar" class="sidebar">
         <label for="menu-toggle" class="sidebar__close-btn"><i class="fa-solid fa-bars"></i></label>
         <ul class="sidebar__list">
-            <li class="sidebar__item"><a href="#" class="sidebar__link">Nosotros</a></li>
-            <li class="sidebar__item"><a href="./resources.html" class="sidebar__link">Materiales</a></li>
-            <li class="sidebar__item"><a href="#" class="sidebar__link">Ayuda</a></li>
-            <li class="sidebar__item"><a href="./contact_us.html" class="sidebar__link">Contactenos</a></li>
+            <li class="sidebar__item"><a href="index.html" class="sidebar__link">Inicio</a></li>
+            <li class="sidebar__item"><a href="info.html" class="sidebar__link">Nosotros</a></li>
+            <li class="sidebar__item"><a href="resources.html" class="sidebar__link">Materiales</a></li>
+            <li class="sidebar__item"><a href="help.html" class="sidebar__link">Ayuda</a></li>
+            <li class="sidebar__item"><a href="contact_us.html" class="sidebar__link">Contactenos</a></li>
         </ul>
         <div class="sidebar__logo">
             <img src="../assets/imagenes/SPC_Horizontal_Color.png" alt="Aside Logo" class="sidebar__logo-img">
@@ -47,57 +55,51 @@
     </section>
     <section class="sectionplaylist">
         <div class="content-container">
-            <div class="orange-circle"  id="orange-circle">
-                <span class="rightside-menu-icon" id="rightside-menu-icon">☰</span>
-            </div>
             <aside id="rightside" class="rightside">
                 <ul class="rightside_list">
-                    <li class="rightside_item"><a href="./books.html" class="rightside_link"><i class="fa-solid fa-book-open"></i> Libros</a></li>
-                    <li class="rightside_item"><a href="./playlist.html" class="rightside_link"><i class="fa-solid fa-volume-high"></i> AudioLibros</a></li>
-                    <li class="rightside_item"><a href="./saved_books.html" class="rightside_link"><i class="fa-solid fa-book-bookmark"></i> Mi historial</a></li>
-                    <li class="rightside_item"><a href="#" class="rightside_link"><i class="fa-solid fa-question"></i> Ayuda</a></li>
+                    <li class="rightside_item"><a href="books.html" class="rightside_link"><i class="fa-solid fa-book-open"></i> Libros</a></li>
+                    <li class="rightside_item"><a href="playlist.html" class="rightside_link"><i class="fa-solid fa-volume-high"></i> AudioLibros</a></li>
+                    <li class="rightside_item"><a href="saved_books.html" class="rightside_link"><i class="fa-solid fa-book-bookmark"></i> Mi historial</a></li>
+                    <li class="rightside_item"><a href="help.html" class="rightside_link"><i class="fa-solid fa-question"></i> Ayuda</a></li>
                 </ul>
             </aside>
-            <div class="overlay"></div>
             <div class="playlist-container">
                 <div class="playlist">
-                    <iframe src='https://widget.spreaker.com/player?episode_id=54113781&theme=dark&chapters-image=true'
-                     class="audio" frameborder='0'></iframe>
+                    <h6 class="titleP"><b>La casa y el campo, Historias y lugares y Lecturas para todos los días</b></h6>
+                    <iframe src='https://widget.spreaker.com/player?show_id=4421133&theme=dark&playlist=show&playlist-continuous=true&chapters-image=true'
+                     width='100%' height='400px' frameborder='0'></iframe>
                 </div>
     
                 <div class="playlist">
-                    <iframe src='https://widget.spreaker.com/player?episode_id=54113781&theme=dark&chapters-image=true'
-                     class="audio" frameborder='0'></iframe>
+                    <h6 class="titleP"><b>Secretos para contar: séptima colección</b></h6>
+                    <br>
+                    <iframe src='https://widget.spreaker.com/player?show_id=4796884&theme=dark&playlist=show&playlist-continuous=true&chapters-image=true'
+                     width='100%' height='400px' frameborder='0'></iframe>
                 </div>
     
                 <div class="playlist">
-                    <iframe src='https://widget.spreaker.com/player?episode_id=54113781&theme=dark&chapters-image=true'
-                    class="audio" frameborder='0'></iframe>
+                    <h6 class="titleP"><b>Planeta vivo, El hombre y su cultura y Cuentos y pasatiempos</b></h6>
+                    <iframe src='https://widget.spreaker.com/player?show_id=4421091&theme=dark&playlist=show&playlist-continuous=true&chapters-image=true'
+                     width='100%' height='400px' frameborder='0'></iframe>
                 </div>
     
                 <div class="playlist">
-                    <iframe src='https://widget.spreaker.com/player?episode_id=54113781&theme=dark&chapters-image=true'
-                    class="audio" frameborder='0'></iframe>
+                    <h6 class="titleP"><b>Érase una vez en Colombia</b></h6>
+                    <br>
+                    <iframe src='https://widget.spreaker.com/player?show_id=5822929&theme=dark&playlist=show&playlist-continuous=true&chapters-image=true' 
+                    width='100%' height='400px' frameborder='0'></iframe>
                 </div>
     
                 <div class="playlist">
-                    <iframe src='https://widget.spreaker.com/player?episode_id=54113781&theme=dark&chapters-image=true'
-                     class="audio" frameborder='0'></iframe>
+                    <h6 class="titleP"><b>Historias y Lugares</b></h6>
+                    <iframe src='https://widget.spreaker.com/player?show_id=4671213&theme=dark&playlist=show&playlist-continuous=true&chapters-image=true' 
+                    width='100%' height='400px' frameborder='0'></iframe>
                 </div>
     
                 <div class="playlist">
-                    <iframe src='https://widget.spreaker.com/player?episode_id=54113781&theme=dark&chapters-image=true'
-                    class="audio" frameborder='0'></iframe>
-                </div>
-    
-                <div class="playlist">
-                    <iframe src='https://widget.spreaker.com/player?episode_id=54113781&theme=dark&chapters-image=true'
-                     class="audio" frameborder='0'></iframe>
-                </div>
-    
-                <div class="playlist">
-                    <iframe src='https://widget.spreaker.com/player?episode_id=54113781&theme=dark&chapters-image=true'
-                     class="audio" frameborder='0'></iframe>
+                    <h6 class="titleP"><b>Las historias de Amalia</b></h6>
+                    <iframe src='https://widget.spreaker.com/player?show_id=4421006&theme=dark&playlist=show&playlist-continuous=true&chapters-image=true'
+                     width='100%' height='400px' frameborder='0'></iframe>
                 </div>
                 
             </div>
@@ -128,9 +130,15 @@
           </div>
         </footer>
   </section>  
+<<<<<<< HEAD:HTML/playlist.html
 <script src="../JS/books.js"></script>
 <script src="../JS/oscuro.js"></script>
 <script src="../assets/Fontawesome/all.js"></script>
 <script src="../assets/Bootstrap/bootstrap.js"></script>
+=======
+<script src="/JS/books.js"></script>
+<script src="/assets/Fontawesome/all.js"></script>
+<script src="/assets/Bootstrap/bootstrap.js"></script>
+>>>>>>> origin/developerTwo:playlist.html
 </body>
 </html>

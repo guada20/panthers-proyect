@@ -1,0 +1,75 @@
+.infobook-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.infobook-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+
+#saved-books-table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+#saved-books-table th, #saved-books-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#saved-books-table th {
+    background-color: #002847;
+    color: white;
+}
+
+#saved-books-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#saved-books-table tbody tr:hover {
+    background-color: #ddd;
+}
+
+.btn-download{
+    background-color: #cfd5c8;
+    color: black;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-read:hover {
+    background-color: #45a049;
+}
+
+.btn-remove {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-remove:hover {
+    background-color: #e53935;
+}
+
+@media (max-width: 768px) {
+    #saved-books-table {
+        width: 95%;
+    }
+
+    .btn-read, .btn-remove {
+        padding: 8px 12px;
+    }
+}

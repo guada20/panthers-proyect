@@ -20,7 +20,7 @@ body, html {
     display: flex;
     flex-direction: row; 
     width: 100%;
-    min-height: 100vh; /
+    min-height: 100vh; 
 }
 
 .rightside{
@@ -36,9 +36,10 @@ body, html {
 
 .playlist-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(2, 1fr); 
     gap: 1em; 
     margin-left: 1em;
+    width: 70em;
 }
 
 .playlist {
@@ -46,10 +47,14 @@ body, html {
     padding: 1em;
 }
 
+.playlist .titleP{
+  text-align: center;
+}
 .audio {
     width: 100%;
     height: 150px;
 }
+
 
 @media (max-width: 1025px) {
     .sectionplaylist {
@@ -63,19 +68,6 @@ body, html {
         width: 100%;
     }
     
-    .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 30; 
-    }
-    
-    .overlay.active {
-        display: block;
-    }
 
     .rightside {
         width: 16em;
@@ -96,7 +88,7 @@ body, html {
     }
     
     .rightside.active {
-        left: 0; /* Mostrar el rightside moviéndolo a la posición 0 */
+        left: 0; 
     }
     
     .playlist-container {
@@ -119,20 +111,6 @@ body, html {
         width: 100%;
     }
 
-    .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 30; 
-    }
-    
-    .overlay.active {
-        display: block;
-    }
-
     .rightside {
         width: 16em;
         height: 38em;
@@ -152,7 +130,7 @@ body, html {
     }
     
     .rightside.active {
-        left: 0; /* Mostrar el rightside moviéndolo a la posición 0 */
+        left: 0; 
     }
 
     .playlist-container {
