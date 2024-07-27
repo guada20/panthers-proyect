@@ -5,21 +5,35 @@ function createSavedBookRow(book) {
 
     const titleCell = row.insertCell();
     titleCell.textContent = book.title;
-    titleCell.id = 'title_saved'; // Asignar el ID al título
+    titleCell.id = 'title_saved'; 
 
     const readCell = row.insertCell();
     const readButton = document.createElement('button');
-    readButton.textContent = 'LEER';
-    readButton.classList.add('btn', 'btn-read');
-    readButton.id = 'read'; // Asignar el ID al botón de leer
+    readButton.textContent = 'DESCARGAR';
+    readButton.classList.add('btn', 'btn-download');
+    readButton.id = 'download'; 
     readCell.appendChild(readButton);
 
     const dislikeCell = row.insertCell();
     const dislikeButton = document.createElement('button');
     dislikeButton.textContent = 'Ya no me gusta';
     dislikeButton.classList.add('btn', 'btn-remove');
-    dislikeButton.id = 'dislike'; // Asignar el ID al botón de ya no me gusta
+    dislikeButton.id = 'dislike'; 
     dislikeCell.appendChild(dislikeButton);
+
+    readButton.addEventListener('click', () => {
+        const conCategoría = JSON.parse(localStorage.getItem('conCategoría'));
+        const bookInfo = conCategoría.find(b => b[0] === book.id);
+        if (bookInfo) {
+            const pdfUrl = bookInfo[3];
+            const downloadLink = document.createElement('a');
+            downloadLink.href = pdfUrl;
+            downloadLink.download = book.title;
+            downloadLink.click();
+        } else {
+            console.error('No se encontró la información del libro.');
+        }
+    });
 
     dislikeButton.addEventListener('click', () => {
         removeSavedBook(book.id);

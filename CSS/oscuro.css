@@ -1,0 +1,117 @@
+/* Modo oscuro */
+body.dark {
+    background-color: #1e1e1e;
+}
+
+/* Contenedor principal y eslogan en modo oscuro */
+body.dark .container,
+body.dark .slogan {
+    background-color: #2c2c2c;
+    color: #FFFFFF;
+}
+
+/* Enlaces en modo oscuro */
+body.dark a {
+    color: #000000;
+}
+
+/* Menú en modo oscuro */
+body.dark .sidebar {
+    background-color: #2e2e2e;
+    color: #FFFFFF;
+}
+
+body.dark .header__nav-link,
+body.dark .sidebar__link {
+    color: #FFFFFF;
+}
+
+body.dark .header__nav-link:hover,
+body.dark .sidebar__link:hover {
+    color: #ecead3;
+}
+
+/* Botones en modo oscuro */
+body.dark .btn {
+    background-color: #e7e5d9;
+    color: #000000;
+    border: none;
+}
+
+body.dark .btn:hover {
+    background-color: #618eb4;
+}
+
+/* Ícono de toggle */
+.toggle-icon {
+    display: none;
+    width: 40px;
+    height: 20px;
+    background-color: #000000;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    right: -100px;
+}
+
+/* Círculo del toggle */
+.toggle-icon::before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: all 0.3s;
+}
+
+/* Toggle en modo oscuro */
+body.dark .toggle-icon {
+    background-color: #000000;
+}
+
+body.dark .toggle-icon::before {
+    left: 21px;
+}
+
+/* Mostrar el ícono del toggle solo en la página de inicio */
+.index-page .toggle-icon {
+    display: inline-block;
+}
+
+/* Toggle en modo oscuro en la página de inicio */
+body.dark .index-page .toggle-icon {
+    background-color: #000000;
+}
+
+/* Esconder el ícono del toggle en otras páginas */
+body:not(.index-page) .toggle-icon {
+    display: none;
+}
+
+.toggle {
+    display: none;
+}
+
+/* Estilos específicos para modo oscuro */
+body.dark .body-contenedor {
+    color: #1e1e1e;
+}
+
+body.dark .infobook-container {
+    color: #FFFFFF;
+}
+
+body.dark .title_table,
+body.dark .text_table,
+body.dark .category_select,
+body.dark .section__title {
+    color: #FFFFFF;
+}
+
+body.dark .category_select {
+    background-color: #002847;
+}
