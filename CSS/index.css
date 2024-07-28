@@ -10,6 +10,8 @@ body, h1, h2, h3, p, ul, li, a {
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    color: #000000;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -96,7 +98,7 @@ body.dark-mode .carousel-control-next-icon {
 
 /* Estilos para el botón de corazón */
 .heart-button {
-    background-color: #ff220a;
+    background-color: #fa4616;
     color: #ffffff;
     border: none;
     border-radius: 50px;
@@ -106,7 +108,7 @@ body.dark-mode .carousel-control-next-icon {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    transition: background-color 0.3s ease, color 0.3s;
+    text-decoration: none;
 }
 
 .heart-button:hover {
@@ -250,7 +252,7 @@ body.dark-mode .card__list-link {
 
 /* Botón de alternancia */
 #toggle-theme {
-    background-color: #ff220a;
+    background-color: #fa4616;
     color: #000000;
     border: none;
     padding: 10px 20px;

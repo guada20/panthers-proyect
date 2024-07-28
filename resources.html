@@ -24,8 +24,8 @@
         </div>
         <nav class="header__nav">
             <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="/HTML/login.html" class="header__nav-link">Inicio Sesión</a></li>
-                <li class="header__nav-item"><a href="/HTML/register.html" class="header__nav-link">Registrate</a></li>
+                <li class="header__nav-item"><a href="login.html" class="header__nav-link">Inicio Sesión</a></li>
+                <li class="header__nav-item"><a href="register.html" class="header__nav-link">Registrate</a></li>
             </ul>
         </nav>
         <label for="menu-toggle" class="header__menu-icon"><i class="fa-solid fa-bars"></i></label>
@@ -34,10 +34,11 @@
      <aside id="sidebar" class="sidebar">
         <label for="menu-toggle" class="sidebar__close-btn"><i class="fa-solid fa-bars"></i></label>
         <ul class="sidebar__list">
-            <li class="sidebar__item"><a href="#" class="sidebar__link">Nosotros</a></li>
-            <li class="sidebar__item"><a href="./resources.html" class="sidebar__link">Materiales</a></li>
-            <li class="sidebar__item"><a href="#" class="sidebar__link">Ayuda</a></li>
-            <li class="sidebar__item"><a href="./contact_us.html" class="sidebar__link">Contactenos</a></li>
+            <li class="sidebar__item"><a href="index.html" class="sidebar__link">Inicio</a></li>
+            <li class="sidebar__item"><a href="info.html" class="sidebar__link">Nosotros</a></li>
+            <li class="sidebar__item"><a href="resources.html" class="sidebar__link">Materiales</a></li>
+            <li class="sidebar__item"><a href="help.html" class="sidebar__link">Ayuda</a></li>
+            <li class="sidebar__item"><a href="contact_us.html" class="sidebar__link">Contactenos</a></li>
         </ul>
         <div class="sidebar__logo">
             <img src="../assets/imagenes/SPC_Horizontal_Color.png" alt="Aside Logo" class="sidebar__logo-img">
@@ -46,24 +47,20 @@
      <div class="overlay"></div>
     </section>
     <section class="sectionbooks">
-        <div class="orange-circle"  id="orange-circle">
-            <span class="rightside-menu-icon" id="rightside-menu-icon">☰</span>
-        </div>
         <aside id="rightside" class="rightside">
             <ul class="rightside_list">
-                <li class="rightside_item"><a href="./books.html" class="rightside_link"><i class="fa-solid fa-book-open"></i> Libros</a></li>
-                <li class="rightside_item"><a href="./playlist.html" class="rightside_link"><i class="fa-solid fa-volume-high"></i> AudioLibros</a></li>
-                <li class="rightside_item"><a href="./saved_books.html" class="rightside_link"><i class="fa-solid fa-book-bookmark"></i> Mi historial</a></li>
-                <li class="rightside_item"><a href="#" class="rightside_link"><i class="fa-solid fa-question"></i> Ayuda</a></li>
+                <li class="rightside_item"><a href="books.html" class="rightside_link"><i class="fa-solid fa-book-open"></i> Libros</a></li>
+                <li class="rightside_item"><a href="playlist.html" class="rightside_link"><i class="fa-solid fa-volume-high"></i> AudioLibros</a></li>
+                <li class="rightside_item"><a href="saved_books.html" class="rightside_link"><i class="fa-solid fa-book-bookmark"></i> Mi historial</a></li>
+                <li class="rightside_item"><a href="help.html" class="rightside_link"><i class="fa-solid fa-question"></i> Ayuda</a></li>
             </ul>
         </aside>
         <div class="materials_container" id="materials_container">
             <div class="breadcrumb">
-                <a href="./index.html">&lt; Volver a inicio</a>
+                <a href="index.html">&lt; Volver a inicio</a>
             </div>
-            <p class="title_table" id="title_table">Nuestros libros y sus recursos</p>
+                <p class="title_table" id="title_table">Nuestros libros y sus recursos</p>
                 <p class="text_table" id="text_table">En esta tabla puedes ver nuestros libros y cuales recursos tiene cada uno para una mejor experiencia</p>
-    
                 <div class="categories">
                     <label for="category_select" class="category_select">Seleccionar categoría:</label>
                     <select class="category_select" id="category_select">
@@ -111,10 +108,14 @@
         </footer>
   </section>
     <div class="overlay"></div>
+
+
 <script src="../JS/books.js"></script>
 <script src="../JS/table_books.js"></script>
 <script src="../JS/oscuro.js"></script>
 <script src="../assets/Fontawesome/all.js"></script>
 <script src="../assets/Bootstrap/bootstrap.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
 </body>
 </html>

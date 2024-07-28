@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.sectionbooks {
+    padding: 1em;
+    color: black;
+    margin-top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    margin-right: 1em;
+}
+
+.information {
+    display: flex;
+    justify-content: center;
+    flex-direction: row; 
+}
+
+.information > div {
+    flex: 1;
+    background-color: #cfd5c8;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.history{
+   width: 50em;
+   height: 40em;
+}
+
+.purpose{
+    width: 10em;
+    height: 40em;
+    align-items: center;
+}
+
+.purpose img{
+    width: 21em;
+    height: 25em;
+}
+
+.intention{
+    width: 25em;
+    height: 40em;
+}
+
+.titleinfo{
+    font-size: 1.5em;
+}
+ 
+.listinfor li{
+   border: 0.1em black solid;
+   padding: 0.4em;
+}
+
+.title_lines{
+    font-size: 2em;
+    text-align: center;
+    background-color: #ecead3;
+    border-radius: 0.3em;
+    padding: 0.2em;
+    margin-top: 0.3em;
+    height: 1.8em ;
+}
+
+.lines {
+    display: flex;
+    justify-content: center;
+    flex-direction: row; 
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 3em;
+}
+
+.line > a {
+    width: 30em;
+    background-color: #e3e3e3;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.line > a img {
+    max-width: 100%;
+    margin-top: 2em;
+}
+
+/* Estilos para tablet */
+@media (max-width: 1024px) {
+    .information {
+        flex-direction: column;
+    }
+     
+    .history, .purpose, .intention {
+        width: 80%;
+    }
+     
+    .purpose img {
+        width: 25em;
+        height: 25em;
+    }
+
+    .line {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .line > a {
+        width: 80%;
+    }
+
+    .line > a img {
+        max-width: 100%;
+    }
+}
+
+/* Estilos para móvil */
+@media (max-width: 767px) {
+    .information {
+        flex-direction: column; 
+        align-items: center;
+        margin-left: 0.1em;
+        margin-right: 0.1em;
+    }
+     
+    .history, .purpose, .intention {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+    
+    .purpose img {
+        width: 19em;
+        height: 20em;
+    }
+
+    .lines {
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .line {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    .line > a {
+        width: 90%;
+        margin: 10px 0;
+    }
+    
+    .line > a img {
+        max-width: 100%;
+    }
+}
