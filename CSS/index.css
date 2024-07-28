@@ -10,8 +10,6 @@ body, h1, h2, h3, p, ul, li, a {
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #000000;
-    background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
