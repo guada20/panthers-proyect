@@ -1,0 +1,204 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.sectioncontact {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.contact_us {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.contactus__form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+}
+.title_form {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.text_form {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form_label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.btn_submit_contact {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn_submit_contact:hover {
+    background-color: #45a049;
+}
+
+.address_and_networks {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 10em;
+}
+
+.address_contact {
+    font-size: 14px;
+}
+.network_contact {
+    display: block;
+    font-family: "Be Vietnam Pro", sans-serif;
+    padding: 0.5em;
+    width: 40em;
+    background: #cfd5c8;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.1em;
+    transition: transform 0.3s ease;
+    transform: scale(0.9);
+}
+
+.network_contact:hover {
+    color: #000;
+    transform: scale(1);
+}
+
+.img_contact {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+.confirmation_message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; 
+    z-index: 1000;
+}
+
+.breadcrumb{
+    top: 1em;
+    left: 5em;
+    background-color: #ECEAD3;
+    padding: 1em 1em;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+    width: 10em;
+
+}
+
+.breadcrumb a {
+    color: #002847;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+@media (max-width: 1024px) {
+    .sectioncontact {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto; 
+    }
+    .contact_us {
+        width: 100%;
+        padding: 2em;
+    }
+    .address_and_networks {
+        width: 100%;
+        padding: 1em;
+        gap: 2em; 
+        margin-right: 0; 
+    }
+    .address_contact {
+        font-size: 1.5em; 
+        width: 100%;
+    }
+
+    .network_contact {
+        width: 30em; 
+    }
+
+    .img_contact {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        margin-top: 2em;
+        margin-right: 0; 
+    }
+}
+
+@media (max-width: 767px) {
+    .sectioncontact {
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        margin: 0 auto; 
+    }
+
+    .contact_us,
+    .address_and_networks {
+        width: 90%;
+        max-width: none; 
+        padding: 1em;
+    }
+    .address_and_networks {
+        padding: 10px;
+        gap: 2em; 
+        margin-right: 0; 
+    }
+    .address_contact {
+        font-size: 1em; 
+    }
+    .network_contact {
+        width: 100%; 
+        max-width: 20em; 
+    }
+    .img_contact {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        margin-top: 2em;
+        margin-right: 0; 
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión - Secretos para contar</title>
+    <link rel="stylesheet" type="text/css" href="/CSS/login_registro.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/oscuro.css">
+    <link rel="stylesheet" href="/assets/Fontawesome/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <label for="toggle" id="label_toggle" class="label_toggle">
+        <span id="toggle_icon" class="toggle-icon"></span>
+    </label>
+    <input type="checkbox" id="toggle" class="toggle">
+    
+    <div class="body-contenedor">
+        <div class="breadcrumb">
+            <a href="index.html">&lt; Volver a inicio</a>
+        </div>
+        
+    <div class="body-contenedor">
+        <div class="contenedor-sesion">
+            <div class="seccion">
+                <div class="titulo-seccion">
+                    <div class="logo-container">
+                        <img src="/assets/imagenes/SPC_Horizontal_Color.png" alt="Logo" class="logo">
+                    </div>
+                    <h5 class="titulo-texto">Iniciar sesión</h5>
+                </div>
+                
+                <form autocomplete="off" class="form-sesion" action="#" method="post" accept-charset="utf-8">
+                    <div class="form-input">
+                        <input type="email" placeholder="Correo" required>
+                        <div class="icono">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <input type="password" placeholder="Contraseña" minlength="6" required>
+                        <div class="icono">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-form iniciar">Iniciar sesión</button>
+                </form>
+                <div class="opciones-sociales">
+                    <p>O inicia sesión con:</p>
+                    <div class="botones-sociales">
+                        <button class="btn-social google">
+                            <i class="fab fa-google"></i>&nbsp;Google
+                        </button>
+                        <button class="btn-social facebook">
+                            <i class="fab fa-facebook-f"></i>&nbsp;Facebook
+                        </button>
+                    </div>
+                </div>
+                <div class="crear-cuenta">
+                    ¿No tienes una cuenta? Crea una <a href="register.html">aquí</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/Fontawesome/all.js"></script>
+    <script src="/JS/oscuro.js"></script>
+
+</body>
+</html>

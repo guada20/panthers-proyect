@@ -1,0 +1,162 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    box-sizing: border-box; 
+}
+
+.materials_container {
+    flex: 1;
+    margin-left: 20px; 
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    box-sizing: border-box;
+}
+
+.options_container{
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    flex-direction: row; 
+    display: flex;
+    justify-content: center;
+}
+
+.option_img{
+    height: auto;
+    width: 12em;
+    gap: 8em;
+    display: block;
+}
+
+.title_table{
+  text-align: center;
+  font-size: 2em;
+}
+
+.text_table{
+  text-align: center;
+  font-size: 1em;
+}
+
+.table_books .row {
+    display: flex;
+    padding: 0.1em 0;
+}
+
+.table_books {
+    flex: 1;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.table_books .column_title {
+    font-weight: bold;
+}
+
+.table_books .column a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.row {
+    display: flex; 
+    margin-right:1em;
+}
+
+.column_title{
+   background-color: #002847;
+   color: white;
+   flex: 1; 
+   border: 1px solid #ccc;
+   padding: 10px; 
+   text-align: center; 
+   margin: 5px;
+   box-sizing: border-box;
+}
+
+.column {
+    flex: 1; 
+    border: 1px solid #ccc; 
+    padding: 10px;
+    text-align: center; 
+    margin: 5px;
+    background-color: #ecead3; 
+    color: #000;
+    box-sizing: border-box;
+}
+
+.text_table {
+    text-align: center;
+    font-size: 1em;
+    color: #333; 
+}
+
+.categories {
+    margin-bottom: 20px; 
+}
+
+.categories select {
+    padding: 5px;
+    font-size: 16px;
+    display: block; 
+    margin-bottom: 10px; 
+    max-width: 100%;
+}
+
+.breadcrumb{
+    top: 1em;
+    left: 5em;
+    background-color: #ECEAD3;
+    padding: 1em 1em;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+    width: 10em;
+}
+
+.breadcrumb a {
+    color: #002847;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+/*mediada para equipos moviles*/
+@media (max-width: 767px) {
+    .title_table {
+        font-size: 1.5em;
+    }
+
+    .text_table {
+        font-size: 1em;
+    }
+
+    .column_title, .column {
+        font-size: 0.8em;
+        padding: 3px;
+        word-break: break-word; 
+    }
+
+    .option_category {
+        font-size: 1em;
+        height: 0.1em;
+    }
+    
+    .table_books {
+        padding: 0 10px;
+    }
+
+    .table_books .row {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .table_books .column_title,
+    .table_books .column {
+        flex: 1;
+    }
+}
