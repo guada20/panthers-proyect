@@ -15,7 +15,6 @@ body {
 }
 
 
-
 /* Estilos del eslogan */
 .slogan {
     background-color: #ffffff;
@@ -72,7 +71,6 @@ body.dark-mode .carousel-caption p {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Estilos para los íconos de control del carrusel (previo y siguiente) */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.5);
@@ -110,7 +108,7 @@ body.dark-mode .carousel-control-next-icon {
 }
 
 .heart-button:hover {
-    background-color: #618EB4;
+    background-color: #ff0000be;
 }
 
 .heart-button i {
@@ -144,6 +142,12 @@ body.dark-mode .carousel-control-next-icon {
     gap: 30px;
     justify-content: space-around;
 }
+.section__title {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .programas__item {
     flex: 1 1 calc(33.333% - 20px);
@@ -156,6 +160,8 @@ body.dark-mode .carousel-control-next-icon {
     flex-direction: column;
     justify-content: space-between;
     transition: background-color 0.3s, color 0.3s;
+    margin-top: 35px; /* Añade margen en la parte superior */
+    margin-bottom: 35px; /* Añade margen en la parte inferior */
 }
 
 body.dark-mode .programas__item {
@@ -240,9 +246,6 @@ body.dark-mode .card__list-link {
     transition: color 0.3s;
 }
 
-.card__list-link:hover {
-    color: #618EB4;
-}
 
 body.dark-mode .card__list-link {
     color: #F7F5EB;

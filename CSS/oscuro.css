@@ -1,9 +1,7 @@
-/* Modo oscuro */
 body.dark {
     background-color: #1e1e1e;
 }
 
-/* Contenedor principal y eslogan en modo oscuro */
 body.dark .container,
 body.dark .slogan {
     background-color: #2c2c2c;
@@ -12,7 +10,7 @@ body.dark .slogan {
 
 /* Enlaces en modo oscuro */
 body.dark a {
-    color: #000000;
+    color: #1e1e1e;
 }
 
 /* Menú en modo oscuro */
@@ -34,24 +32,23 @@ body.dark .sidebar__link:hover {
 /* Botones en modo oscuro */
 body.dark .btn {
     background-color: #e7e5d9;
-    color: #000000;
+    color: #1e1e1e;
     border: none;
 }
 
-body.dark .btn:hover {
-    background-color: #618eb4;
-}
+
 
 /* Ícono de toggle */
 .toggle-icon {
     display: none;
     width: 40px;
     height: 20px;
-    background-color: #000000;
+    background-color: #1e1e1e;
     border-radius: 20px;
     position: relative;
     cursor: pointer;
     right: -100px;
+    margin: 1em;
 }
 
 /* Círculo del toggle */
@@ -84,7 +81,7 @@ body.dark .toggle-icon::before {
 
 /* Toggle en modo oscuro en la página de inicio */
 body.dark .index-page .toggle-icon {
-    background-color: #000000;
+    background-color: #1e1e1e;
 }
 
 /* Esconder el ícono del toggle en otras páginas */
